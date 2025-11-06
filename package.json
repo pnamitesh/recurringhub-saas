@@ -1,16 +1,24 @@
 {
-  "name": "recurringhub-saas",
-  "version": "0.1.0",
+  "name": "recurring-hub-saas",
+  "version": "1.0.0",
+  "description": "RecurringHub - Recurring Billing & Subscription Platform",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "autoprefixer": "^10.4.0",
+    "chart.js": "^3.9.1",
+    "date-fns": "^2.30.0",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "lucide-react": "^0.263.1",
+    "postcss": "^8.4.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "^18.2.0",
+    "react-papaparse": "^4.4.0",
+    "react-router-dom": "^6.30.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-toastify": "^9.1.3",
+    "tailwindcss": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,13 +28,12 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      "> 0.2%",
       "not dead",
       "not op_mini all"
     ],
