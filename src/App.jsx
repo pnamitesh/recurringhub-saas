@@ -68,7 +68,7 @@ function AppContent() {
       {/* Sidebar */}
       <aside className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h1 className="sidebar-title">RecurringHub</h1>
+          <h1 className="sidebar-title"><b>🪙𝚑𝚒𝚜𝚊𝚋𝚒𝚏𝚢</b></h1>
           <button 
   className="sidebar-toggle"
   onClick={() => setSidebarOpen(!sidebarOpen)}
