@@ -878,7 +878,7 @@ body.dark a:hover {
 
 
 /* HAMBURGER BUTTON - VISIBLE EVERYWHERE */
-.sidebar-toggle {
+/* .sidebar-toggle {
   position: fixed !important;
   top: 15px !important;
   right: 15px !important;
@@ -895,9 +895,9 @@ body.dark a:hover {
 
 .sidebar-toggle:hover {
   background: #0052A3 !important;
-}
+} */
 
-/* MOBILE SIDEBAR */
+/* MOBILE SIDEBAR
 @media (max-width: 768px) {
   .sidebar {
     position: fixed !important;
@@ -918,4 +918,8 @@ body.dark a:hover {
     width: 100% !important;
     margin-left: 0 !important;
   }
-}
+} */
+
+
+
+

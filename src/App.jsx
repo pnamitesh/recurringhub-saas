@@ -18,7 +18,7 @@ import Reminders from './pages/Reminders';
 import Reports from './pages/Reports';
 import Settings from './pages/Settings';
 import Analytics from './pages/Analytics';
-import PaymentSchedule from './pages/PaymentSchedule';
+// import PaymentSchedule from './pages/PaymentSchedule';
 import CustomerProfiles from './pages/CustomerProfiles';
 import BulkOperations from './pages/BulkOperations';
 
@@ -56,7 +56,7 @@ function AppContent() {
     { path: '/payments', icon: CreditCard, label: 'Payments' },
     { path: '/reminders', icon: Bell, label: 'Reminders' },
     { path: '/customer-profiles', icon: User, label: 'Profiles' },
-    { path: '/payment-schedule', icon: Calendar, label: 'Schedule' },
+    // { path: '/payment-schedule', icon: Calendar, label: 'Schedule' },
     { path: '/analytics', icon: BarChart3, label: 'Analytics' },
     { path: '/bulk-operations', icon: Zap, label: 'Bulk Ops' },
     { path: '/reports', icon: FileText, label: 'Reports' },
@@ -73,15 +73,15 @@ function AppContent() {
   className="sidebar-toggle"
   onClick={() => setSidebarOpen(!sidebarOpen)}
   style={{
-    position: 'fixed',
+    // position: 'absolute',
     top: '15px',
     right: '15px',
     zIndex: 1001,
     background: '#0066CC',
     color: 'white',
     border: 'none',
-    borderRadius: '8px',
-    padding: '8px 12px',
+    borderRadius: '6px',
+    padding: '3px 8px',
     cursor: 'pointer',
     fontSize: '20px'
   }}
@@ -130,12 +130,14 @@ function AppContent() {
             <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/analytics" element={<Analytics />} />
-            <Route path="/payment-schedule" element={<PaymentSchedule />} />
+            
             <Route path="/customer-profiles" element={<CustomerProfiles />} />
             <Route path="/bulk-operations" element={<BulkOperations />} />
           </Routes>
         </div>
       </main>
+      {/* Removed the payment schedule page route .......... till further update */}
+      {/* <Route path="/payment-schedule" element={<PaymentSchedule />} /> */}
 
       <ToastContainer 
         position="top-right" 
