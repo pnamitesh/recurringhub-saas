@@ -95,8 +95,8 @@ function Analytics() {
           </div>
         </div>
 
-        <div className="metric-card">
-          <div className="metric-label">Month-on-Month Growth</div>
+        <div className="metric-card growth">
+          <div className="metric-label growth">Month-on-Month Growth</div>
           <div className="metric-value text-white">{revenueMetrics.growth}%</div>
         </div>
 
@@ -114,9 +114,10 @@ function Analytics() {
       </div>
 
       {/* Customer Metrics */}
-      <div className="metrics-grid mb-6">
-        <div className="metric-card">
-          <div className="metric-label">Active Customers</div>
+      
+      {/* <div className="metrics-grid mb-6">
+        <div className="metric-card active">
+          <div className="metric-label active">Active Customers</div>
           <div className="metric-value">{customerMetrics.active}</div>
         </div>
         <div className="metric-card warning">
@@ -127,7 +128,7 @@ function Analytics() {
           <div className="metric-label">Suspended</div>
           <div className="metric-value">{customerMetrics.suspended}</div>
         </div>
-      </div>
+      </div> */}
 
       {/* Charts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

@@ -185,18 +185,18 @@ function Payments() {
           <div className="metric-label">Pending</div>
           <div className="metric-value">{formatCurrency(totalPending)}</div>
         </div>
-        <div className="metric-card">
+        <div className="metric-card totalpayments">
           <div className="metric-label">Total Payments</div>
           <div className="metric-value">{filteredPayments.length}</div>
         </div>
-        <div className="metric-card">
+        <div className="metric-card thismonth">
           <div className="metric-label">This Month</div>
           <div className="metric-value">
             {payments.filter(p => {
               const paymentDate = new Date(p.date);
               const now = new Date();
               return paymentDate.getMonth() === now.getMonth() && 
-                     paymentDate.getFullYear() === now.getFullYear();
+                    paymentDate.getFullYear() === now.getFullYear();
             }).length}
           </div>
         </div>

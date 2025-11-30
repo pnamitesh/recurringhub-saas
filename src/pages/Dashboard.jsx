@@ -2,7 +2,14 @@ import React, { useContext } from 'react';
 import { DatabaseContext } from '../contexts/DatabaseContext';
 import { formatCurrency, calculateStatus } from '../utils/helpers';
 import { Pie, Bar } from 'react-chartjs-2';
-import { TrendingUp, TrendingDown, Users, DollarSign, AlertCircle } from 'lucide-react';
+import { TrendingUp, TrendingDown, Users, DollarSign, AlertCircle, PiggyBank, Hourglass  } from 'lucide-react';
+// import { TrendingUp, TrendingDown, Users, DollarSign, AlertCircle, PiggyBank, Hourglass  } from 'lucide-react';
+import {
+  Banknote,
+  ClockAlert,
+  CircleAlert,
+  UsersRound
+} from "lucide-react";
 
 function Dashboard() {
   const { customers, payments } = useContext(DatabaseContext);
@@ -94,8 +101,9 @@ function Dashboard() {
                 Collection Rate: {collectionRate}%
               </div>
             </div>
-            <DollarSign size={48} className="opacity-50" />
-          </div>
+            <div className="emoji-icon">💰</div>
+
+            </div>
         </div>
 
         <div className="metric-card warning">
@@ -107,7 +115,8 @@ function Dashboard() {
                 Expected: {formatCurrency(expectedRevenue)}
               </div>
             </div>
-            <TrendingUp size={48} className="opacity-50" />
+            <div className="emoji-icon">🕒</div>
+            
           </div>
         </div>
 
@@ -120,11 +129,12 @@ function Dashboard() {
                 {overdueCustomers.length} customer(s)
               </div>
             </div>
-            <AlertCircle size={48} className="opacity-50" />
+            <div className="emoji-icon">⚠️</div>
+            
           </div>
         </div>
 
-        <div className="metric-card">
+        <div className="metric-card customer">
           <div className="flex-between">
             <div>
               <div className="metric-label">Active Customers</div>
@@ -132,30 +142,21 @@ function Dashboard() {
               <div className="text-sm opacity-90 mt-2">
                 Total: {customers.length}
               </div>
-            </div>
-            <Users size={48} className="opacity-50" />
+            </div >
+            <div className="emoji-icon">👥</div>
+            
           </div>
         </div>
       </div>
 
-      {/* Charts */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="chart-container">
-          <h2 className="text-xl font-semibold mb-4">Revenue Breakdown</h2>
-          <Pie data={revenueData} options={chartOptions} />
-        </div>
-
-        <div className="chart-container">
-          <h2 className="text-xl font-semibold mb-4">Customers by Plan</h2>
-          <Bar data={planData} options={chartOptions} />
-        </div>
-      </div>
+    
 
       {/* Top Defaulters */}
       {overdueCustomers.length > 0 && (
         <div className="card mt-6">
           <h2 className="text-xl font-semibold mb-4 text-red-600">
-            <AlertCircle size={24} className="inline mr-2" />
+            {/* <AlertCircle size={24} className="inline mr-2" /> */}
+            ⚠️
             Overdue Payments - Action Required
           </h2>
           <div className="table-container">
@@ -187,9 +188,23 @@ function Dashboard() {
         </div>
       )}
 
+     {/* Charts */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="chart-container">
+          <h2 className="text-xl font-semibold mb-4">Revenue Breakdown</h2>
+          <Pie data={revenueData} options={chartOptions} />
+        </div>
+
+        <div className="chart-container">
+          <h2 className="text-xl font-semibold mb-4">Customers by Plan</h2>
+          <Bar data={planData} options={chartOptions} />
+        </div>
+      </div>
+
       {/* Recent Payments */}
       <div className="card mt-6">
-        <h2 className="text-xl font-semibold mb-4">Recent Payments</h2>
+      
+        <h2 className="text-xl font-semibold mb-4">💰 Recent Payments</h2>
         <div className="table-container">
           <table className="table">
             <thead>
@@ -217,6 +232,8 @@ function Dashboard() {
           </table>
         </div>
       </div>
+
+    
     </div>
   );
 }
@@ -704,3 +721,25 @@ export default Dashboard;
 //     </DatabaseProvider>
 //   );
 // }
+
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

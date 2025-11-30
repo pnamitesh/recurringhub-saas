@@ -151,7 +151,7 @@ function Reports() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Reports & Analytics</h1>
+      <h1 className="text-2xl font-bold mb-6">Reports</h1>
 
       {/* Summary Cards */}
       <div className="metrics-grid mb-6">
@@ -159,11 +159,11 @@ function Reports() {
           <div className="metric-label">Total Revenue</div>
           <div className="metric-value">{formatCurrency(totalRevenue)}</div>
         </div>
-        <div className="metric-card">
+        <div className="metric-card active">
           <div className="metric-label">Total Customers</div>
           <div className="metric-value">{totalCustomers}</div>
         </div>
-        <div className="metric-card">
+        <div className="metric-card growth">
           <div className="metric-label">Active Customers</div>
           <div className="metric-value">{activeCustomers}</div>
         </div>
